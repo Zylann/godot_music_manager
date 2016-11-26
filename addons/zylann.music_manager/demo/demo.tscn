@@ -1,0 +1,123 @@
+[gd_scene load_steps=3 format=1]
+
+[ext_resource path="res://addons/zylann.music_manager/demo/demo.gd" type="Script" id=1]
+[ext_resource path="res://addons/zylann.music_manager/demo/music_manager_debug.gd" type="Script" id=2]
+
+[node name="Node" type="Node"]
+
+script/script = ExtResource( 1 )
+
+[node name="Button1" type="Button" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 109.0
+margin/top = 105.0
+margin/right = 239.0
+margin/bottom = 145.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Music 1"
+flat = false
+
+[node name="Button1_2" type="Button" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 263.0
+margin/top = 103.0
+margin/right = 394.0
+margin/bottom = 143.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Music 1 (delayed)"
+flat = false
+
+[node name="Button2" type="Button" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 111.0
+margin/top = 164.0
+margin/right = 241.0
+margin/bottom = 204.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Music 2"
+flat = false
+
+[node name="Button3" type="Button" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 113.0
+margin/top = 217.0
+margin/right = 243.0
+margin/bottom = 257.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Music 3"
+flat = false
+
+[node name="StopButton" type="Button" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 511.0
+margin/top = 103.0
+margin/right = 641.0
+margin/bottom = 143.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Stop (smooth)"
+flat = false
+
+[node name="StopButtonNow" type="Button" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 511.0
+margin/top = 171.0
+margin/right = 641.0
+margin/bottom = 211.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Stop (now)"
+flat = false
+
+[node name="Debug" type="Node2D" parent="."]
+
+transform/pos = Vector2( 137, 313 )
+script/script = ExtResource( 2 )
+
+[connection signal="pressed" from="Button1" to="." method="_on_Button1_pressed"]
+
+[connection signal="pressed" from="Button1_2" to="." method="_on_Button1_2_pressed"]
+
+[connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
+
+[connection signal="pressed" from="Button3" to="." method="_on_Button3_pressed"]
+
+[connection signal="pressed" from="StopButton" to="." method="_on_StopButton_pressed"]
+
+[connection signal="pressed" from="StopButtonNow" to="." method="_on_StopButtonNow_pressed"]
+
+
