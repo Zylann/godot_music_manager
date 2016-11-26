@@ -6,11 +6,6 @@ extends Node
 # Public API
 #-----------------------------------------------------------------------------
 
-# The previous music fades out and the next fades in at the same time
-const FADE_CROSS = 0
-# The previous music fades out next music starts after the previous finished playing
-const FADE_WAIT = 1
-
 # Plays a stream without any fading.
 func play(stream, offset=0):
 	fade(stream, null, null, null)
